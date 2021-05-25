@@ -20,7 +20,7 @@ export default function Dashboard() {
       <Header />
       <SideNav />
       <Switch>
-        <Route path="/" component =  {Home} />
+        <Route path="/home" component =  {Home} />
         <Route path="/project" component={Project} />
         <Route path = '/report' component={Report} />
       </Switch>
