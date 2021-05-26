@@ -7,25 +7,25 @@ import { makeStyles } from "@material-ui/core/styles";
 import SideNav from "./shared/Components/sideNav/SideNav";
 import Project from "./components/project/Project";
 import Footer from "./shared/Components/footer/Footer";
-import Report from './components/report/Report';
-import {BrowserRouter} from 'react-router-dom'
+import Report from "./components/report/Report";
+import { BrowserRouter } from "react-router-dom";
 
 const useStyles = makeStyles({});
 
 export default function Dashboard() {
   const classes = useStyles();
   return (
-      <BrowserRouter>
-    <div className={classes.container}>
-      <Header />
-      <SideNav />
-      <Switch>
-        <Route path="/home" component =  {Home} />
-        <Route path="/project" component={Project} />
-        <Route path = '/report' component={Report} />
-      </Switch>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className={classes.container}>
+        <Header />
+        <SideNav />
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/project" component={Project} />
+          <Route path="/report" component={Report} />
+        </Switch>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

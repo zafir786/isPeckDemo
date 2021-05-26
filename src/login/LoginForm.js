@@ -19,8 +19,6 @@ class LoginForm extends Component {
       [e.target.name]: e.target.value,
     });
   }
-  
-  
 
   submitForm(e) {
     e.preventDefault();
@@ -39,22 +37,28 @@ class LoginForm extends Component {
     return (
       <div>
         <h3>Welcome login form</h3>
-        <form onSubmit={this.submitForm}>
+        <form onSubmit={this.submitForm} className="form-group">
           <input
             type="text"
             placeholder="username"
             name="username"
+            className="form-control"
             value={this.state.username}
             onChange={this.onChange}
           />
+          <br />
           <input
             type="text"
             placeholder="password"
             name="password"
+            className="form-control"
             value={this.state.password}
             onChange={this.onChange}
           />
-          <input type="submit" />
+          <br />
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </form>
       </div>
     );
